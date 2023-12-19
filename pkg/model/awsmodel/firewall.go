@@ -323,6 +323,7 @@ func (b *AWSModelContext) GetSecurityGroups(role kops.InstanceGroupRole) ([]Secu
 				"port=8443", // k8s api secondary listener
 				"port=3:4",  // ICMP
 				"port=-1",   // ICMPv6
+				"port=8443", // NLB apiserver
 
 				// TODO: UDP vs TCP vs ICMP vs ICMPv6
 				// TODO: Protocol 4 for calico
